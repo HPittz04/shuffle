@@ -1,0 +1,1076 @@
+openapi: 3.0.0
+info:
+  title: Elastic Security
+  description: A basic Elastic Security app built to showcase use of Elastic
+    Security from Shuffle
+  version: "1.0"
+  x-logo: data:image/png;base64,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
+  contact:
+    name: "@frikkylikeme"
+    url: https://twitter.com/frikkylikeme
+    email: frikky@shuffler.io
+  x-categories:
+    - Eradication
+servers:
+  - url: https://kibana_host:port
+host: kibana_host:port
+basePath: /
+schemes:
+  - "https:"
+paths:
+  /s/siem/api/detection_engine/rules/_find:
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Find detection rules
+      operationId: Find_detection_rules
+      description: ""
+      parameters:
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  /api/detection_engine/index:
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Signal index operations
+      operationId: Signal_index_operations
+      description: ""
+      parameters:
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  /api/detection_engine/tags:
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get detection tags
+      operationId: Get_detection_tags
+      description: ""
+      parameters:
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  /api/detection_engine/privileges:
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get detection priviliges
+      operationId: Get_detection_priviliges
+      description: ""
+      parameters:
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  /api/detection_engine/signals/search:
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: '{"took":0,"timed_out":false,"_shards":{"total":0,"successful":0,"skipped":0,"failed":0},"hits":{"total":{"value":0,"relation":"eq"},"max_score":0,"hits":[]}}'
+      summary: Get signals
+      operationId: Get_signals
+      description: ""
+      parameters:
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: '{"aggs":{"alertsByGrouping":{"terms":{"field":"kibana.alert.rule.name","order":{"_count":"desc"},"size":10},"aggs":{"alerts":{"date_histogram":{"field":"@timestamp","fixed_interval":"2699999ms","min_doc_count":0,"extended_bounds":{"min":"2022-10-23T22:00:00.000Z","max":"2022-10-24T21:59:59.999Z"}}}}}},"query":{"bool":{"filter":[{"bool":{"must":[],"filter":[{"bool":{"should":[{"term":{"kibana.alert.workflow_status":"acknowledged"}},{"term":{"kibana.alert.workflow_status":"in-progress"}}]}}],"should":[],"must_not":[{"exists":{"field":"kibana.alert.building_block_type"}}]}},{"range":{"@timestamp":{"gte":"2022-10-23T22:00:00.000Z","lte":"2022-10-24T21:59:59.999Z"}}}]}},"runtime_mappings":{}}'
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+        - in: header
+          name: Content-Type
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: application/json
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: '{"aggs":{"alertsByGrouping":{"terms":{"field":"kibana.alert.rule.name","order":{"_count":"desc"},"size":10},"aggs":{"alerts":{"date_histogram":{"field":"@timestamp","fixed_interval":"2699999ms","min_doc_count":0,"extended_bounds":{"min":"2022-10-23T22:00:00.000Z","max":"2022-10-24T21:59:59.999Z"}}}}}},"query":{"bool":{"filter":[{"bool":{"must":[],"filter":[{"bool":{"should":[{"term":{"kibana.alert.workflow_status":"acknowledged"}},{"term":{"kibana.alert.workflow_status":"in-progress"}}]}}],"should":[],"must_not":[{"exists":{"field":"kibana.alert.building_block_type"}}]}},{"range":{"@timestamp":{"gte":"2022-10-23T22:00:00.000Z","lte":"2022-10-24T21:59:59.999Z"}}}]}},"runtime_mappings":{}}'
+  /api/detection_engine/rules/prepackaged:
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: ""
+      summary: Get prepackaged rules
+      operationId: Get_prepackaged_rules
+      description: ""
+      parameters:
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  /api/cases:
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: >-
+                  {
+                    "id": "66b9aa00-94fa-11ea-9f74-e7e108796192",
+                    "version": "WzUzMiwxXQ==",
+                    "comments": [],
+                    "totalComment": 0,
+                    "title": "This case will self-destruct in 5 seconds",
+                    "description": "James Bond clicked on a highly suspicious email banner advertising cheap holidays for underpaid civil servants. Operation bubblegum is active. Repeat - operation bubblegum is now active",
+                    "tags": [
+                      "phishing",
+                      "social engineering",
+                      "bubblegum"
+                    ],
+                    "closed_at": null,
+                    "closed_by": null,
+                    "created_at": "2020-05-13T09:16:17.416Z",
+                    "created_by": {
+                      "email": "ahunley@imf.usa.gov",
+                      "full_name": "Alan Hunley",
+                      "username": "ahunley"
+                    },
+                    "external_service": null, 
+                    "status": "open",
+                    "updated_at": null,
+                    "updated_by": null,
+                    "connector": {
+                      "id": "131d4448-abe0-4789-939d-8ef60680b498", 
+                      "name": "My connector",
+                      "type": ".jira",
+                      "fields": {
+                        "issueType": "10006",
+                        "priority": "High",
+                      }
+                    },
+                    "settings": {
+                      "syncAlerts": true
+                    },
+                    "owner": "securitySolution",
+                  }
+      summary: Create Case
+      operationId: Create_Case
+      description: ""
+      parameters:
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: |-
+            {
+                "title": "Sample case ",
+                "tags": [
+                    "test"
+                ],
+                "severity": "high",
+                "description": "hi",
+                "connector": {
+                    "id": "none",
+                    "name": "none",
+                    "type": ".none",
+                    "fields": null
+                },
+                "settings": {
+                    "syncAlerts": true
+                },
+                "owner": "securitySolution"
+            }
+          schema:
+            type: string
+        - in: header
+          name: Content-Type
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: application/json
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: |-
+              {
+                  "title": "Sample case ",
+                  "tags": [
+                      "test"
+                  ],
+                  "severity": "high",
+                  "description": "hi",
+                  "connector": {
+                      "id": "none",
+                      "name": "none",
+                      "type": ".none",
+                      "fields": null
+                  },
+                  "settings": {
+                      "syncAlerts": true
+                  },
+                  "owner": "securitySolution"
+              }
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: >-
+                  [{
+                    "id": "66b9aa00-94fa-11ea-9f74-e7e108796192",
+                    "version": "WzUzMiwxXQ==",
+                    "comments": [],
+                    "totalComment": 0,
+                    "title": "This case will self-destruct in 5 seconds",
+                    "description": "James Bond clicked on a highly suspicious email banner advertising cheap holidays for underpaid civil servants. Operation bubblegum is active. Repeat - operation bubblegum is now active",
+                    "tags": [
+                      "phishing",
+                      "social engineering",
+                      "bubblegum"
+                    ],
+                    "closed_at": null,
+                    "closed_by": null,
+                    "created_at": "2020-05-13T09:16:17.416Z",
+                    "created_by": {
+                      "email": "ahunley@imf.usa.gov",
+                      "full_name": "Alan Hunley",
+                      "username": "ahunley"
+                    },
+                    "external_service": null, 
+                    "status": "open",
+                    "updated_at": null,
+                    "updated_by": null,
+                    "connector": {
+                      "id": "131d4448-abe0-4789-939d-8ef60680b498", 
+                      "name": "My connector",
+                      "type": ".jira",
+                      "fields": {
+                        "issueType": "10006",
+                        "priority": "High",
+                      }
+                    },
+                    "settings": {
+                      "syncAlerts": true
+                    },
+                    "owner": "securitySolution",
+                  }]
+      summary: Get Cases
+      operationId: Get_Cases
+      description: ""
+      parameters: []
+      requestBody:
+        content: {}
+  "/api/cases/{case_id}/comments":
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: >-
+                  {
+
+                  "id": "293f1bc0-74f6-11ea-b83a-553aecdb28b6",
+                    "version": "WzIwNDMyLDFd",
+                    "comments": [
+                      {
+                        "id": "8af6ac20-74f6-11ea-b83a-553aecdb28b6",
+                        "version": "WzIwNDMxLDFd",
+                        "type": "user",
+                        "comment": "That is nothing - Ethan Hunt answered a targeted social media campaign promoting phishy pension schemes to IMF operatives.",
+                        "created_at": "2020-04-02T15:28:03.034Z",
+                        "created_by": {
+                          "email": "moneypenny@hms.gov.uk",
+                          "full_name": "Ms Moneypenny",
+                          "username": "moneypenny"
+                        },
+                        "pushed_at": null,
+                        "pushed_by": null,
+                        "updated_at": null,
+                        "updated_by": null
+                      }
+                    ],
+                    "totalComment": 1,
+                    "title": "This case will self-destruct in 5 seconds",
+                    "tags": [
+                      "phishing",
+                      "social engineering"
+                    ],
+                    "description": "James Bond clicked on a highly suspicious email banner advertising cheap holidays for underpaid civil servants.",
+                    "closed_at": null,
+                    "closed_by": null,
+                    "created_at": "2020-04-02T15:25:19.088Z",
+                    "created_by": {
+                      "email": "ahunley@imf.usa.gov",
+                      "full_name": "Alan Hunley",
+                      "username": "ahunley"
+                    },
+                    "external_service": null,
+                    "owner": "securitySolution",
+                    "status": "open",
+                    "updated_at": "2020-04-02T15:28:03.034Z",
+                    "updated_by": {
+                      "email": "moneypenny@hms.gov.uk",
+                      "full_name": "Ms Moneypenny",
+                      "username": "moneypenny"
+                    }
+                  }
+      summary: Add case comment
+      operationId: Add_case_comment
+      description: ""
+      parameters:
+        - in: path
+          name: case_id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: >-
+            {
+              "type": "user",
+              "comment": "That is nothing - Ethan Hunt answered a targeted social
+              media campaign promoting phishy pension schemes to IMF operatives.",
+              "owner": "securitySolution"
+            }
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: >-
+              {
+                "type": "user",
+                "comment": "That is nothing - Ethan Hunt answered a targeted social
+                media campaign promoting phishy pension schemes to IMF operatives.",
+                "owner": "securitySolution"
+              }
+  "/api/endpoint/metadata/{endpoint_id}":
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: >-
+                  {
+                      "host_status": "healthy",
+                      "metadata": {
+                          "@timestamp": "2021-11-24T15:48:57.3609346Z",
+                          "Endpoint": {
+                              "capabilities": [
+                                  "isolation"
+                              ],
+                              "configuration": {
+                                  "isolation": false
+                              },
+                              "policy": {
+                                  "applied": {
+                                      "endpoint_policy_version": "2",
+                                      "id": "d5371dcd-93b7-4627-af88-4084f7d6aa3e",
+                                      "name": "test",
+                                      "status": "success",
+                                      "version": "3"
+                                  }
+                              },
+                              "state": {
+                                  "isolation": false
+                              },
+                              "status": "enrolled"
+                          },
+                          "agent": {
+                              "build": {
+                                  "original": "version: 7.16.0, compiled: Tue Nov 16 17:00:00 2021, branch: 7.16, commit: 73a51033db85e0fb3be1c934697ef6a2b08979ab"
+                              },
+                              "id": "abb8a826-6812-448c-a571-6d8269b51449",
+                              "type": "endpoint",
+                              "version": "7.16.0"
+                          },
+                          "data_stream": {
+                              "dataset": "endpoint.metadata",
+                              "namespace": "default",
+                              "type": "metrics"
+                          },
+                          "ecs": {
+                              "version": "1.11.0"
+                          },
+                          "elastic": {
+                              "agent": {
+                                  "id": "abb8a826-6812-448c-a571-6d8269b51449"
+                              }
+                          },
+                          "event": {
+                              "action": "endpoint_metadata",
+                              "agent_id_status": "verified",
+                              "category": [
+                                  "host"
+                              ],
+                              "created": "2021-11-24T15:48:57.3609346Z",
+                              "dataset": "endpoint.metadata",
+                              "id": "MNtRc++KoKHXXwlj+++++OhZ",
+                              "ingested": "2021-11-24T15:48:58Z",
+                              "kind": "metric",
+                              "module": "endpoint",
+                              "sequence": 43757,
+                              "type": [
+                                  "info"
+                              ]
+                          },
+                          "host": {
+                              "architecture": "x86_64",
+                              "hostname": "WinDev2104Eval",
+                              "id": "17d9cabc-7edd-43bc-bacb-8da5f5e6c0e5",
+                              "ip": [
+                                  "10.0.2.15",
+                                  "fe80::21a6:63d3:d70e:e3ad",
+                                  "127.0.0.1",
+                                  "::1"
+                              ],
+                              "mac": [
+                                  "08:00:27:b1:1d:5a"
+                              ],
+                              "name": "WinDev2104Eval",
+                              "os": {
+                                  "Ext": {
+                                      "variant": "Windows 10 Enterprise Evaluation"
+                                  },
+                                  "family": "windows",
+                                  "full": "Windows 10 Enterprise Evaluation 20H2 (10.0.19042.906)",
+                                  "kernel": "20H2 (10.0.19042.906)",
+                                  "name": "Windows",
+                                  "platform": "windows",
+                                  "type": "windows",
+                                  "version": "20H2 (10.0.19042.906)"
+                              }
+                          },
+                          "message": "Endpoint metadata"
+                      },
+                      "policy_info": {
+                          "agent": {
+                              "applied": {
+                                  "id": "ed7e3720-4bad-11ec-a2a8-fb22e62a5753",
+                                  "revision": 3
+                              },
+                              "configured": {
+                                  "id": "ed7e3720-4bad-11ec-a2a8-fb22e62a5753",
+                                  "revision": 3
+                              }
+                          },
+                          "endpoint": {
+                              "id": "d5371dcd-93b7-4627-af88-4084f7d6aa3e",
+                              "revision": 2
+                          }
+                      }
+                  }
+      summary: Get Endpoint
+      operationId: Get_Endpoint
+      description: ""
+      parameters:
+        - in: path
+          name: endpoint_id
+          description: Generated by shuffler.io OpenAPI
+          required: true
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        content: {}
+  /api/endpoint/metadata:
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: >-
+                  {
+                      "hosts": [
+                          {
+                              "host_status": "healthy",
+                              "metadata": {
+                                  "@timestamp": "2021-11-24T15:47:57.432173535Z",
+                                  "Endpoint": {
+                                      "capabilities": [
+                                          "isolation"
+                                      ],
+                                      "configuration": {
+                                          "isolation": false
+                                      },
+                                      "policy": {
+                                          "applied": {
+                                              "endpoint_policy_version": "2",
+                                              "id": "d5371dcd-93b7-4627-af88-4084f7d6aa3e",
+                                              "name": "test",
+                                              "status": "success",
+                                              "version": "3"
+                                          }
+                                      },
+                                      "state": {
+                                          "isolation": false
+                                      },
+                                      "status": "enrolled"
+                                  },
+                                  "agent": {
+                                      "build": {
+                                          "original": "version: 7.16.0, compiled: Tue Nov 16 16:00:00 2021, branch: 7.16, commit: 73a51033db85e0fb3be1c934697ef6a2b08979ab"
+                                      },
+                                      "id": "285297c6-3bff-4b83-9a07-f3e749801123",
+                                      "type": "endpoint",
+                                      "version": "7.16.0"
+                                  },
+                                  "data_stream": {
+                                      "dataset": "endpoint.metadata",
+                                      "namespace": "default",
+                                      "type": "metrics"
+                                  },
+                                  "ecs": {
+                                      "version": "1.11.0"
+                                  },
+                                  "elastic": {
+                                      "agent": {
+                                          "id": "285297c6-3bff-4b83-9a07-f3e749801123"
+                                      }
+                                  },
+                                  "event": {
+                                      "action": "endpoint_metadata",
+                                      "agent_id_status": "verified",
+                                      "category": [
+                                          "host"
+                                      ],
+                                      "created": "2021-11-24T15:47:57.432173535Z",
+                                      "dataset": "endpoint.metadata",
+                                      "id": "MNtSXK/SkhEBnmgt++++++7S",
+                                      "ingested": "2021-11-24T15:47:58Z",
+                                      "kind": "metric",
+                                      "module": "endpoint",
+                                      "sequence": 400,
+                                      "type": [
+                                          "info"
+                                      ]
+                                  },
+                                  "host": {
+                                      "architecture": "x86_64",
+                                      "hostname": "david-Xubuntu",
+                                      "id": "0cfead88e2024bd8a27476352b5ab264",
+                                      "ip": [
+                                          "127.0.0.1",
+                                          "::1",
+                                          "10.0.2.15",
+                                          "fe80::2ac7:8e15:b957:2fa1"
+                                      ],
+                                      "mac": [
+                                          "08:00:27:e6:78:8b"
+                                      ],
+                                      "name": "david-Xubuntu",
+                                      "os": {
+                                          "Ext": {
+                                              "variant": "Ubuntu"
+                                          },
+                                          "family": "ubuntu",
+                                          "full": "Ubuntu 20.04.2",
+                                          "kernel": "5.8.0-59-generic #66~20.04.1-Ubuntu SMP Thu Jun 17 11:14:10 UTC 2021",
+                                          "name": "Linux",
+                                          "platform": "ubuntu",
+                                          "type": "linux",
+                                          "version": "20.04.2"
+                                      }
+                                  },
+                                  "message": "Endpoint metadata"
+                              },
+                              "policy_info": {
+                                  "agent": {
+                                      "applied": {
+                                          "id": "ed7e3720-4bad-11ec-a2a8-fb22e62a5753",
+                                          "revision": 0
+                                      },
+                                      "configured": {
+                                          "id": "ed7e3720-4bad-11ec-a2a8-fb22e62a5753",
+                                          "revision": 3
+                                      }
+                                  },
+                                  "endpoint": {
+                                      "id": "d5371dcd-93b7-4627-af88-4084f7d6aa3e",
+                                      "revision": 2
+                                  }
+                              }
+                          },
+                          {
+                              "host_status": "healthy",
+                              "metadata": {
+                                  "@timestamp": "2021-11-24T15:44:31.4917849Z",
+                                  "Endpoint": {
+                                      "capabilities": [
+                                          "isolation"
+                                      ],
+                                      "configuration": {
+                                          "isolation": false
+                                      },
+                                      "policy": {
+                                          "applied": {
+                                              "endpoint_policy_version": "2",
+                                              "id": "d5371dcd-93b7-4627-af88-4084f7d6aa3e",
+                                              "name": "test",
+                                              "status": "success",
+                                              "version": "3"
+                                          }
+                                      },
+                                      "state": {
+                                          "isolation": false
+                                      },
+                                      "status": "enrolled"
+                                  },
+                                  "agent": {
+                                      "build": {
+                                          "original": "version: 7.16.0, compiled: Tue Nov 16 17:00:00 2021, branch: 7.16, commit: 73a51033db85e0fb3be1c934697ef6a2b08979ab"
+                                      },
+                                      "id": "abb8a826-6812-448c-a571-6d8269b51449",
+                                      "type": "endpoint",
+                                      "version": "7.16.0"
+                                  },
+                                  "data_stream": {
+                                      "dataset": "endpoint.metadata",
+                                      "namespace": "default",
+                                      "type": "metrics"
+                                  },
+                                  "ecs": {
+                                      "version": "1.11.0"
+                                  },
+                                  "elastic": {
+                                      "agent": {
+                                          "id": "abb8a826-6812-448c-a571-6d8269b51449"
+                                      }
+                                  },
+                                  "event": {
+                                      "action": "endpoint_metadata",
+                                      "agent_id_status": "verified",
+                                      "category": [
+                                          "host"
+                                      ],
+                                      "created": "2021-11-24T15:44:31.4917849Z",
+                                      "dataset": "endpoint.metadata",
+                                      "id": "MNtRc++KoKHXXwlj+++++/N9",
+                                      "ingested": "2021-11-24T15:44:33Z",
+                                      "kind": "metric",
+                                      "module": "endpoint",
+                                      "sequence": 5159,
+                                      "type": [
+                                          "info"
+                                      ]
+                                  },
+                                  "host": {
+                                      "architecture": "x86_64",
+                                      "hostname": "WinDev2104Eval",
+                                      "id": "17d9cabc-7edd-43bc-bacb-8da5f5e6c0e5",
+                                      "ip": [
+                                          "10.0.2.15",
+                                          "fe80::21a6:63d3:d70e:e3ad",
+                                          "127.0.0.1",
+                                          "::1"
+                                      ],
+                                      "mac": [
+                                          "08:00:27:b1:1d:5a"
+                                      ],
+                                      "name": "WinDev2104Eval",
+                                      "os": {
+                                          "Ext": {
+                                              "variant": "Windows 10 Enterprise Evaluation"
+                                          },
+                                          "family": "windows",
+                                          "full": "Windows 10 Enterprise Evaluation 20H2 (10.0.19042.906)",
+                                          "kernel": "20H2 (10.0.19042.906)",
+                                          "name": "Windows",
+                                          "platform": "windows",
+                                          "type": "windows",
+                                          "version": "20H2 (10.0.19042.906)"
+                                      }
+                                  },
+                                  "message": "Endpoint metadata"
+                              },
+                              "policy_info": {
+                                  "agent": {
+                                      "applied": {
+                                          "id": "ed7e3720-4bad-11ec-a2a8-fb22e62a5753",
+                                          "revision": 0
+                                      },
+                                      "configured": {
+                                          "id": "ed7e3720-4bad-11ec-a2a8-fb22e62a5753",
+                                          "revision": 3
+                                      }
+                                  },
+                                  "endpoint": {
+                                      "id": "d5371dcd-93b7-4627-af88-4084f7d6aa3e",
+                                      "revision": 2
+                                  }
+                              }
+                          }
+                      ],
+                      "request_page_index": 0,
+                      "request_page_size": 10,
+                      "total": 2
+                  }
+      summary: List Endpoints
+      operationId: List_Endpoints
+      description: ""
+      parameters:
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: |-
+            {
+            	"paging_properties": [
+            		{ "page_size": 10 },
+            		{ "page_index": 0 }
+            	]
+            }
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: |-
+              {
+              	"paging_properties": [
+              		{ "page_size": 10 },
+              		{ "page_index": 0 }
+              	]
+              }
+  /api/endpoint/isolate:
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: |-
+                  {
+                    "action": "233db9ea-6733-4849-9226-5a7039c7161d"
+                  }
+      summary: Isolate Hosts
+      operationId: Isolate_Hosts
+      description: ""
+      parameters:
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: |-
+            {
+              "endpoint_ids": [
+              	"9972d10e-4b9e-41aa-a534-a85e2a28ea42",
+              	"bc0e4f0c-3bca-4633-9fee-156c0b505d16",
+              	"fa89271b-b9d4-43f2-a684-307cffddeb5a"
+              ],
+              "comment": "Locked down, pending further investigation"
+            }
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: |-
+              {
+                "endpoint_ids": [
+                	"9972d10e-4b9e-41aa-a534-a85e2a28ea42",
+                	"bc0e4f0c-3bca-4633-9fee-156c0b505d16",
+                	"fa89271b-b9d4-43f2-a684-307cffddeb5a"
+                ],
+                "comment": "Locked down, pending further investigation"
+              }
+  /api/endpoint/unisolate:
+    post:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: |-
+                  {
+                    "action": "233db9ea-6733-4849-9226-5a7039c7161d"
+                  }
+      summary: Unisolate a host
+      operationId: Unisolate_a_host
+      description: ""
+      parameters:
+        - in: body
+          name: body
+          multiline: true
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          example: |-
+            {
+              "endpoint_ids": [
+              	"9972d10e-4b9e-41aa-a534-a85e2a28ea42",
+              	"bc0e4f0c-3bca-4633-9fee-156c0b505d16",
+              	"fa89271b-b9d4-43f2-a684-307cffddeb5a"
+              ],
+              "comment": "Benign process identified, releasing group"
+            }
+          schema:
+            type: string
+        - in: header
+          name: kbn-xsrf
+          multiline: false
+          description: Header generated by shuffler.io OpenAPI
+          required: false
+          example: kibana
+          schema:
+            type: string
+      requestBody:
+        description: Generated by Shuffler.io
+        required: false
+        content:
+          example:
+            example: |-
+              {
+                "endpoint_ids": [
+                	"9972d10e-4b9e-41aa-a534-a85e2a28ea42",
+                	"bc0e4f0c-3bca-4633-9fee-156c0b505d16",
+                	"fa89271b-b9d4-43f2-a684-307cffddeb5a"
+                ],
+                "comment": "Benign process identified, releasing group"
+              }
+  /api/cases/_find:
+    get:
+      responses:
+        default:
+          description: default
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: >-
+                  [{
+                    "id": "66b9aa00-94fa-11ea-9f74-e7e108796192",
+                    "version": "WzUzMiwxXQ==",
+                    "comments": [],
+                    "totalComment": 0,
+                    "title": "This case will self-destruct in 5 seconds",
+                    "description": "James Bond clicked on a highly suspicious email banner advertising cheap holidays for underpaid civil servants. Operation bubblegum is active. Repeat - operation bubblegum is now active",
+                    "tags": [
+                      "phishing",
+                      "social engineering",
+                      "bubblegum"
+                    ],
+                    "closed_at": null,
+                    "closed_by": null,
+                    "created_at": "2020-05-13T09:16:17.416Z",
+                    "created_by": {
+                      "email": "ahunley@imf.usa.gov",
+                      "full_name": "Alan Hunley",
+                      "username": "ahunley"
+                    },
+                    "external_service": null, 
+                    "status": "open",
+                    "updated_at": null,
+                    "updated_by": null,
+                    "connector": {
+                      "id": "131d4448-abe0-4789-939d-8ef60680b498", 
+                      "name": "My connector",
+                      "type": ".jira",
+                      "fields": {
+                        "issueType": "10006",
+                        "priority": "High",
+                      }
+                    },
+                    "settings": {
+                      "syncAlerts": true
+                    },
+                    "owner": "securitySolution",
+                  }]
+      summary: Find Cases
+      operationId: Find_Cases
+      description: ""
+      parameters:
+        - in: query
+          name: searchFields
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: owner
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: page
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: perPage
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: sortField
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: sortOrder
+          description: Generated by shuffler.io OpenAPI
+          required: false
+          schema:
+            type: string
+      requestBody:
+        content: {}
+components:
+  securitySchemes:
+    BasicAuth:
+      type: http
+      scheme: basic
+tags:
+  - name: EDR
+  - name: SIEM
